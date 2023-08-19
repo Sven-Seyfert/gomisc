@@ -16,3 +16,6 @@
 
 # Go workspace file
 go.work
+
+# Custom utils to maintain the repository/project
+Au3ChangelogUpdater.exe
