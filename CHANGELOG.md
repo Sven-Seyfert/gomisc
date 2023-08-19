@@ -26,8 +26,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/sven-seyfert/gomisc/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Sven-Seyfert/gomisc/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Sven-Seyfert/gomisc/releases/tag/v0.1.0
 
 ---
 
