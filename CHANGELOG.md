@@ -11,6 +11,22 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-08-19
+
+### Added
+
+- Initialize go by go.mod file.
+- Package singleinstance.
+
+### Changed
+
+- Extend .gitignore file.
+
+### Documented
+
+- README.md structure change (first draft).
+- Trivial upper case change in CHANGELOG.md for proper github username.
+
 ## [0.1.0] - 2023-08-19
 
 ### Added
@@ -26,7 +42,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/Sven-Seyfert/gomisc/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/gomisc/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/Sven-Seyfert/gomisc/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Sven-Seyfert/gomisc/releases/tag/v0.1.0
 
 ---
