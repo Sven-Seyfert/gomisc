@@ -17,7 +17,7 @@
 
 ## Description
 
-With gomisc which stands for "go miscellaneous",  these miscellaneous golang packages act as a library or util collection.
+With **gomisc** which stands for "go miscellaneous", these miscellaneous golang packages act as a function library or util collection.
 
 ## Features
 

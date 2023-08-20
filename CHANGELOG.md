@@ -11,6 +11,13 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.3.0] - 2023-08-20
+
+### Documented
+
+- Bring the original LICENSE file back.
+- Update CHANGELOG.md and README.md file.
+
 ## [0.2.0] - 2023-08-19
 
 ### Added
@@ -42,7 +49,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/Sven-Seyfert/gomisc/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/gomisc/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/Sven-Seyfert/gomisc/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Sven-Seyfert/gomisc/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Sven-Seyfert/gomisc/releases/tag/v0.1.0
 
