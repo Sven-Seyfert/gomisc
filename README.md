@@ -19,11 +19,14 @@
 
 With **gomisc** which stands for "go miscellaneous", these miscellaneous golang packages act as a function library or util collection.
 
+> ⚠ Please notice: This collection is mainly concepted to fulfill my needs on private or professional projects. That's the reason why you probably will see functions with implicit values or similar that also could be parameterized (to fulfill your needs too).
+
 ## Features
 
 | Package        | Description                                                           | Package file(s)    | Usage example by           |
 | ---            | ---                                                                   | ---                | ---                        |
 | singleinstance | Ensures only a single instance of the software runs at the same time. | single_instance.go | example_single_instance.go |
+|                |                                                                       |                    |                            |
 |                |                                                                       |                    |                            |
 |                |                                                                       |                    |                            |
 |                |                                                                       |                    |                            |
@@ -40,7 +43,8 @@ To be defined.
 
 #### *Installation*
 
-Get gomisc by `go get github.com/sven-seyfert/gomisc@v0.3.0` or `go get -u github.com/sven-seyfert/gomisc` for the latest version.
+Get **gomisc** by `go get -u github.com/sven-seyfert/gomisc` for the latest version<br />
+or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.4.0`.
 
 More will be defined soon.
 
