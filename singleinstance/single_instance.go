@@ -13,14 +13,12 @@ func CreateInstanceFile() {
 	}
 
 	file, err := os.Create(instanceFile)
-	if err != nil {
-		panic(err)
-	}
+	check(err)
 
 	defer file.Close()
 
-	// This second ensures a robust file handling
-	time.Sleep(1 * time.Second)
+	// This 400 milliseconds delay ensures a robust file handling
+	time.Sleep(time.Millisecond * 400)
 }
 
 func existsInstanceFile() bool {
@@ -34,6 +32,10 @@ func existsInstanceFile() bool {
 
 func RemoveInstanceFile() {
 	err := os.Remove(instanceFile)
+	check(err)
+}
+
+func check(err error) {
 	if err != nil {
 		panic(err)
 	}
