@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Sven-Seyfert/gomisc/singleinstance"
+	"github.com/sven-seyfert/gomisc/singleinstance"
 )
 
 func main() {
