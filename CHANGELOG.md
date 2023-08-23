@@ -11,6 +11,12 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.6.0] - 2023-08-23
+
+### Documented
+
+- Add missing description for package 'crypt'.
+
 ## [0.5.0] - 2023-08-23
 
 ### Added
@@ -79,7 +85,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/sven-seyfert/gomisc/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/sven-seyfert/gomisc/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/sven-seyfert/gomisc/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/sven-seyfert/gomisc/compare/v0.2.0...v0.3.0
