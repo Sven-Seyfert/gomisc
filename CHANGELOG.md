@@ -11,6 +11,22 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.5.0] - 2023-08-23
+
+### Added
+
+- Package 'crypt' and a usage example.
+
+### Changed
+
+- Extend example for 'singleinstance' package.
+- File structure of single_instance.go and documents functions by comments.
+
+### Documented
+
+- Update CHANGELOG.md and README.md file.
+- Update README.md file for introduced 'crypt' package.
+
 ## [0.4.0] - 2023-08-21
 
 ### Changed
@@ -37,7 +53,7 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 ### Added
 
 - Initialize go by go.mod file.
-- Package singleinstance.
+- Package 'singleinstance' and a usage example.
 
 ### Changed
 
@@ -63,7 +79,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/sven-seyfert/gomisc/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/sven-seyfert/gomisc/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/sven-seyfert/gomisc/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/sven-seyfert/gomisc/compare/v0.1.0...v0.2.0

@@ -28,7 +28,7 @@ With **gomisc** which stands for "go miscellaneous", these miscellaneous golang 
 | crypt          |                                                                      | crypt.go           | [examples/crypt/main.go](https://github.com/Sven-Seyfert/gomisc/blob/main/examples/crypt/main.go)                   |
 | singleinstance | Ensures only a single instance of the program runs at the same time. | single_instance.go | [examples/singleinstance/main.go](https://github.com/Sven-Seyfert/gomisc/blob/main/examples/singleinstance/main.go) |
 
-More will follow.
+More will follow soon.
 
 ## Documentation
 
