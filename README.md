@@ -25,8 +25,8 @@ With **gomisc** which stands for "go miscellaneous", these miscellaneous golang 
 
 | Package        | Description                                                          | Package file(s)    | Usage example                                                                                                       |
 | ---            | ---                                                                  | ---                | ---                                                                                                                 |
-| crypt          |                                                                      | crypt.go           | [examples/crypt/main.go](https://github.com/Sven-Seyfert/gomisc/blob/main/examples/crypt/main.go)                   |
-| singleinstance | Ensures only a single instance of the program runs at the same time. | single_instance.go | [examples/singleinstance/main.go](https://github.com/Sven-Seyfert/gomisc/blob/main/examples/singleinstance/main.go) |
+| crypt          | Encrypt and decrypt data (strings) by the usage of a secret and GCM. | crypt.go           | [examples/crypt/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/crypt/main.go)                   |
+| singleinstance | Ensures only a single instance of the program runs at the same time. | single_instance.go | [examples/singleinstance/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/singleinstance/main.go) |
 
 More will follow soon.
 
