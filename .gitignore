@@ -19,3 +19,6 @@ go.work
 
 # Custom utils to maintain the repository/project
 Au3ChangelogUpdater.exe
+
+# Linter settings
+.golangci.yml
