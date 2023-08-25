@@ -1,3 +1,6 @@
+// Encrypt and decrypt data (strings) by the usage of a secret and GCM.
+//
+// Check out a usage example at https://github.com/sven-seyfert/gomisc/blob/main/examples/crypt/main.go
 package crypt
 
 import (

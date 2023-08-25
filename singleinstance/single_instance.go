@@ -1,3 +1,6 @@
+// Ensures only a single instance of the program runs at the same time.
+//
+// Check out a usage example at https://github.com/sven-seyfert/gomisc/blob/main/examples/singleinstance/main.go
 package singleinstance
 
 import (
