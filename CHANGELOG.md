@@ -11,6 +11,18 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.7.0] - 2023-08-25
+
+### Changed
+
+- Add .golangci.yml to .gitignore (linter settings).
+- Apply linter suggestions.
+
+### Documented
+
+- Add package description for Godocs (pkg.go.dev).
+- Update CHANGELOG.md and README.md file.
+
 ## [0.6.0] - 2023-08-23
 
 ### Documented
@@ -85,7 +97,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/sven-seyfert/gomisc/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/sven-seyfert/gomisc/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/sven-seyfert/gomisc/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/sven-seyfert/gomisc/compare/v0.3.0...v0.4.0

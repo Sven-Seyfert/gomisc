@@ -43,7 +43,7 @@ To be defined.
 #### *Installation*
 
 Get **gomisc** by `go get -u github.com/sven-seyfert/gomisc` for the latest version<br />
-or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.5.0`.
+or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.7.0`.
 
 More will be defined soon.
 
