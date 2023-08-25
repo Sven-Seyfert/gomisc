@@ -24,7 +24,8 @@ func GenerateSecretKey() string {
 }
 
 func generate32ByteKeyForAes256() []byte {
-	bytes := make([]byte, 32)
+	length := 32
+	bytes := make([]byte, length)
 
 	// Check the correct number of bytes
 	_, err := rand.Read(bytes)
@@ -39,7 +40,7 @@ func encodeByteToString(bytes []byte) string {
 
 // Encrypt encrypts a string by the usage of a secret and the GCM
 // cryptography mode.
-func Encrypt(stringToEncrypt, secret string) (encryptedString string) {
+func Encrypt(stringToEncrypt, secret string) string {
 	key := decodeStringToBytes(secret)
 	plainText := []byte(stringToEncrypt)
 	block := createCipherBlock(key)
@@ -77,7 +78,7 @@ func createCipherBlock(key []byte) cipher.Block {
 
 // Decrypt decrypts a encrypted string by the usage of a secret and the
 // GCM cryptography mode.
-func Decrypt(encryptedString, secret string) (decryptedString string) {
+func Decrypt(encryptedString, secret string) string {
 	key := decodeStringToBytes(secret)
 	enc := decodeStringToBytes(encryptedString)
 	block := createCipherBlock(key)

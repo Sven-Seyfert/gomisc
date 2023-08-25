@@ -28,7 +28,7 @@ func CreateInstanceFile() {
 	defer file.Close()
 
 	// This 150 milliseconds delay ensures a robust file handling
-	time.Sleep(time.Millisecond * 150)
+	time.Sleep(time.Millisecond * 150) //nolint:gomnd
 }
 
 func existsInstanceFile() bool {
