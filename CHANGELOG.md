@@ -11,6 +11,20 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.8.0] - 2023-08-29
+
+### Added
+
+- Tests for package 'singleinstance'.
+
+### Changed
+
+- Error handling for package 'singleinstance'.
+
+### Documented
+
+- Update CHANGELOG.md and README.md file.
+
 ## [0.7.0] - 2023-08-25
 
 ### Changed
@@ -97,7 +111,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/sven-seyfert/gomisc/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/sven-seyfert/gomisc/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/sven-seyfert/gomisc/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/sven-seyfert/gomisc/compare/v0.4.0...v0.5.0

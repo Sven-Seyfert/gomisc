@@ -19,7 +19,7 @@
 
 With **gomisc** which stands for "go miscellaneous", these miscellaneous golang packages act as a function library or util collection.
 
-> ⚠ Please notice: This collection is mainly concepted to fulfill my needs on private or professional projects. That's the reason why you probably will see functions with implicit values or similar that also could be parameterized (to fulfill your needs too).
+> ⚠ Please notice: This collection is mainly concepted to fulfill my needs on private or professional projects. That's the reason why you probably will see functions with implicit values or similar that also could be parameterized, to fulfill your needs too. Feel free to create a GitHub Issue or Pull Request for change requests and suggestions.
 
 ## Features
 
@@ -43,7 +43,7 @@ To be defined.
 #### *Installation*
 
 Get **gomisc** by `go get -u github.com/sven-seyfert/gomisc` for the latest version<br />
-or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.7.0`.
+or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.8.0`.
 
 More will be defined soon.
 
