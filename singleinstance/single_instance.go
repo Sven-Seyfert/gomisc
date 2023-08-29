@@ -4,50 +4,52 @@
 package singleinstance
 
 import (
+	"errors"
+	"fmt"
 	"os"
 	"time"
 )
 
 const instanceFile = "instance_indicator.lock"
 
-func check(err error) {
-	if err != nil {
-		panic(err)
-	}
-}
-
 // CreateInstanceFile creates a instance indicator file for this instance of
 // the program. To ensure this current instance of the program is the only one,
-// the function checks for a existing instance indicator file. In case there
-// is already a instance indicator file, this program will be exited.
-func CreateInstanceFile() {
+// the function checks for a existing instance indicator file. If there is an
+// error, the error will be returned.
+func CreateInstanceFile() error {
 	if existsInstanceFile() {
-		os.Exit(0)
+		errMessage := fmt.Errorf("instance indicator file \"%s\" could not be created because it already exist", instanceFile) //nolint:goerr113,lll
+
+		return errMessage
 	}
 
 	file, err := os.Create(instanceFile)
-	check(err)
+	if err != nil {
+		return err
+	}
 
 	defer file.Close()
 
-	// This 150 milliseconds delay ensures a robust file handling
-	time.Sleep(time.Millisecond * 150) //nolint:gomnd
+	// This 100 milliseconds delay ensures a robust file handling
+	time.Sleep(time.Millisecond * 100) //nolint:gomnd
+
+	return nil
 }
 
 func existsInstanceFile() bool {
-	fileInfo, err := os.Stat(instanceFile)
-	if os.IsNotExist(err) {
-		return false
-	}
+	_, err := os.Stat(instanceFile)
 
-	return !fileInfo.IsDir()
+	return !errors.Is(err, os.ErrNotExist)
 }
 
 // RemoveInstanceFile removes the previously created instance indicator file.
 // Always set this to ensure the next single instance of the program can be run.
-// If the instance indicator file still exists, you will not be able to run
-// your program because the exit procedure in CreateInstanceFile.
-func RemoveInstanceFile() {
+// If there is an error, the error will be returned.
+func RemoveInstanceFile() error {
 	err := os.Remove(instanceFile)
-	check(err)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
