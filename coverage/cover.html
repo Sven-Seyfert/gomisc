@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>singleinstance: Go Coverage Report</title>
+		<title>crypt: Go Coverage Report</title>
 		<style>
 			body {
 				background: black;
@@ -55,7 +55,9 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">github.com/sven-seyfert/gomisc/singleinstance/single_instance.go (93.3%)</option>
+				<option value="file0">github.com/sven-seyfert/gomisc/crypt/crypt.go (81.1%)</option>
+				
+				<option value="file1">github.com/sven-seyfert/gomisc/singleinstance/single_instance.go (93.3%)</option>
 				
 				</select>
 			</div>
@@ -69,7 +71,144 @@
 		</div>
 		<div id="content">
 		
-		<pre class="file" id="file0" style="display: none">// Ensures only a single instance of the program runs at the same time.
+		<pre class="file" id="file0" style="display: none">// Encrypt and decrypt data (strings) by the usage of a secret and GCM.
+//
+// Check out a usage example at https://github.com/sven-seyfert/gomisc/blob/main/examples/crypt/main.go
+package crypt
+
+import (
+        "crypto/aes"
+        "crypto/cipher"
+        "crypto/rand"
+        "encoding/hex"
+        "fmt"
+        "io"
+)
+
+// GenerateSecretKey generates a encoded string based on a 32 byte key for
+// AES-256. This secret key will be used in Encrypt and Decypt functions.
+// If there is an error, the error will be returned.
+func GenerateSecretKey() (string, error) <span class="cov8" title="1">{
+        bytes, err := generate32ByteKeyForAes256()
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">return encodeByteToString(bytes), nil</span>
+}
+
+func generate32ByteKeyForAes256() ([]byte, error) <span class="cov8" title="1">{
+        length := 32
+        bytes := make([]byte, length)
+
+        // Check the correct number of bytes
+        _, err := rand.Read(bytes)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return bytes, nil</span>
+}
+
+func encodeByteToString(bytes []byte) string <span class="cov8" title="1">{
+        return hex.EncodeToString(bytes)
+}</span>
+
+// Encrypt encrypts a string by the usage of a secret and the GCM
+// cryptography mode. If there is an error, the error will be returned.
+func Encrypt(stringToEncrypt, secret string) (string, error) <span class="cov8" title="1">{
+        key, err := decodeStringToBytes(secret)
+        if err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">plainText := []byte(stringToEncrypt)
+
+        block, err := createCipherBlock(key)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        // Create new GCM (https://en.wikipedia.org/wiki/Galois/Counter_Mode)
+        <span class="cov8" title="1">aesGCM, err := cipher.NewGCM(block)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        // Create a nonce from GCM
+        <span class="cov8" title="1">nonce := make([]byte, aesGCM.NonceSize())
+
+        // Check the correct number of bytes
+        _, err = io.ReadFull(rand.Reader, nonce)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        // Encrypt data
+        <span class="cov8" title="1">cipherText := aesGCM.Seal(nonce, nonce, plainText, nil)
+
+        return fmt.Sprintf("%x", cipherText), nil</span>
+}
+
+func decodeStringToBytes(data string) ([]byte, error) <span class="cov8" title="1">{
+        key, err := hex.DecodeString(data)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return key, nil</span>
+}
+
+func createCipherBlock(key []byte) (cipher.Block, error) <span class="cov8" title="1">{
+        block, err := aes.NewCipher(key)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return block, nil</span>
+}
+
+// Decrypt decrypts a encrypted string by the usage of a secret and the
+// GCM cryptography mode. If there is an error, the error will be returned.
+func Decrypt(encryptedString, secret string) (string, error) <span class="cov8" title="1">{
+        key, err := decodeStringToBytes(secret)
+        if err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">enc, err := decodeStringToBytes(encryptedString)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">block, err := createCipherBlock(key)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        // Create new GCM (https://en.wikipedia.org/wiki/Galois/Counter_Mode)
+        <span class="cov8" title="1">aesGCM, err := cipher.NewGCM(block)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        // Get the nonce size
+        <span class="cov8" title="1">nonceSize := aesGCM.NonceSize()
+
+        // Extract the nonce from the encrypted data
+        nonce, cipherText := enc[:nonceSize], enc[nonceSize:]
+
+        // Decrypt data
+        plainText, err := aesGCM.Open(nil, nonce, cipherText, nil)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">return string(plainText), nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">// Ensures only a single instance of the program runs at the same time.
 //
 // Check out a usage example at https://github.com/sven-seyfert/gomisc/blob/main/examples/singleinstance/main.go
 package singleinstance
@@ -89,9 +228,9 @@ const instanceFile = "instance_indicator.lock"
 // error, the error will be returned.
 func CreateInstanceFile() error <span class="cov8" title="1">{
         if existsInstanceFile() </span><span class="cov8" title="1">{
-                errMessage := fmt.Errorf("instance indicator file \"%s\" could not be created because it already exist", instanceFile) //nolint:goerr113,lll
+                message := `instance indicator file "%s" could not be created because it already exist`
 
-                return errMessage
+                return fmt.Errorf(message, instanceFile) //nolint:goerr113
         }</span>
 
         <span class="cov8" title="1">file, err := os.Create(instanceFile)
