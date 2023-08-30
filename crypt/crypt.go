@@ -12,29 +12,29 @@ import (
 	"io"
 )
 
-func check(err error) {
-	if err != nil {
-		panic(err)
-	}
-}
-
 // GenerateSecretKey generates a encoded string based on a 32 byte key for
 // AES-256. This secret key will be used in Encrypt and Decypt functions.
-func GenerateSecretKey() string {
-	bytes := generate32ByteKeyForAes256()
+// If there is an error, the error will be returned.
+func GenerateSecretKey() (string, error) {
+	bytes, err := generate32ByteKeyForAes256()
+	if err != nil {
+		return "", err
+	}
 
-	return encodeByteToString(bytes)
+	return encodeByteToString(bytes), nil
 }
 
-func generate32ByteKeyForAes256() []byte {
+func generate32ByteKeyForAes256() ([]byte, error) {
 	length := 32
 	bytes := make([]byte, length)
 
 	// Check the correct number of bytes
 	_, err := rand.Read(bytes)
-	check(err)
+	if err != nil {
+		return nil, err
+	}
 
-	return bytes
+	return bytes, nil
 }
 
 func encodeByteToString(bytes []byte) string {
@@ -42,53 +42,82 @@ func encodeByteToString(bytes []byte) string {
 }
 
 // Encrypt encrypts a string by the usage of a secret and the GCM
-// cryptography mode.
-func Encrypt(stringToEncrypt, secret string) string {
-	key := decodeStringToBytes(secret)
+// cryptography mode. If there is an error, the error will be returned.
+func Encrypt(stringToEncrypt, secret string) (string, error) {
+	key, err := decodeStringToBytes(secret)
+	if err != nil {
+		return "", err
+	}
+
 	plainText := []byte(stringToEncrypt)
-	block := createCipherBlock(key)
+
+	block, err := createCipherBlock(key)
+	if err != nil {
+		return "", err
+	}
 
 	// Create new GCM (https://en.wikipedia.org/wiki/Galois/Counter_Mode)
 	aesGCM, err := cipher.NewGCM(block)
-	check(err)
+	if err != nil {
+		return "", err
+	}
 
 	// Create a nonce from GCM
 	nonce := make([]byte, aesGCM.NonceSize())
 
 	// Check the correct number of bytes
 	_, err = io.ReadFull(rand.Reader, nonce)
-	check(err)
+	if err != nil {
+		return "", err
+	}
 
 	// Encrypt data
 	cipherText := aesGCM.Seal(nonce, nonce, plainText, nil)
 
-	return fmt.Sprintf("%x", cipherText)
+	return fmt.Sprintf("%x", cipherText), nil
 }
 
-func decodeStringToBytes(data string) []byte {
+func decodeStringToBytes(data string) ([]byte, error) {
 	key, err := hex.DecodeString(data)
-	check(err)
+	if err != nil {
+		return nil, err
+	}
 
-	return key
+	return key, nil
 }
 
-func createCipherBlock(key []byte) cipher.Block {
+func createCipherBlock(key []byte) (cipher.Block, error) {
 	block, err := aes.NewCipher(key)
-	check(err)
+	if err != nil {
+		return nil, err
+	}
 
-	return block
+	return block, nil
 }
 
 // Decrypt decrypts a encrypted string by the usage of a secret and the
-// GCM cryptography mode.
-func Decrypt(encryptedString, secret string) string {
-	key := decodeStringToBytes(secret)
-	enc := decodeStringToBytes(encryptedString)
-	block := createCipherBlock(key)
+// GCM cryptography mode. If there is an error, the error will be returned.
+func Decrypt(encryptedString, secret string) (string, error) {
+	key, err := decodeStringToBytes(secret)
+	if err != nil {
+		return "", err
+	}
+
+	enc, err := decodeStringToBytes(encryptedString)
+	if err != nil {
+		return "", err
+	}
+
+	block, err := createCipherBlock(key)
+	if err != nil {
+		return "", err
+	}
 
 	// Create new GCM (https://en.wikipedia.org/wiki/Galois/Counter_Mode)
 	aesGCM, err := cipher.NewGCM(block)
-	check(err)
+	if err != nil {
+		return "", err
+	}
 
 	// Get the nonce size
 	nonceSize := aesGCM.NonceSize()
@@ -98,7 +127,9 @@ func Decrypt(encryptedString, secret string) string {
 
 	// Decrypt data
 	plainText, err := aesGCM.Open(nil, nonce, cipherText, nil)
-	check(err)
+	if err != nil {
+		return "", err
+	}
 
-	return string(plainText)
+	return string(plainText), nil
 }
