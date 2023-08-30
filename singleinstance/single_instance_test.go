@@ -11,6 +11,8 @@ import (
 var fileHandle *os.File //nolint:gochecknoglobals
 
 func TestCreateInstanceFile(t *testing.T) {
+	const instanceFile = "instance_indicator.lock"
+
 	tests := []struct {
 		name                string
 		expectError         bool
@@ -19,8 +21,6 @@ func TestCreateInstanceFile(t *testing.T) {
 		{name: "happy path file is created", expectError: false, expectFileIsCreated: true},
 		{name: "sad path file already exists", expectError: true, expectFileIsCreated: false},
 	}
-
-	const instanceFile = "instance_indicator.lock"
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
@@ -43,18 +43,18 @@ func TestCreateInstanceFile(t *testing.T) {
 
 			// assert
 			if !test.expectError && err != nil {
-				t.Fatalf("unexpected error for testcase \"%s\"", test.name)
+				t.Fatalf(`unexpected error for testcase "%s"`, test.name)
 			}
 
 			if test.expectError && err == nil {
-				t.Fatalf("a error is expected for testcase \"%s\"", test.name)
+				t.Fatalf(`a error is expected for testcase "%s"`, test.name)
 			}
 
 			_, err = os.Stat(instanceFile)
 			fileExists := !errors.Is(err, os.ErrNotExist)
 
 			if test.expectFileIsCreated && !fileExists {
-				t.Fatalf("instance indicator file should be created for testcase \"%s\"", test.name)
+				t.Fatalf(`instance indicator file should be created for testcase "%s"`, test.name)
 			}
 		})
 	}
@@ -65,13 +65,15 @@ func createFile(t *testing.T, testcase string, filename string) *os.File {
 
 	file, err := os.Create(filename)
 	if err != nil {
-		t.Logf("arrange failed for testcase \"%s\"", testcase)
+		t.Logf(`arrange failed for testcase "%s"`, testcase)
 	}
 
 	return file
 }
 
 func TestRemoveInstanceFile(t *testing.T) {
+	const instanceFile = "instance_indicator.lock"
+
 	tests := []struct {
 		name                string
 		expectError         bool
@@ -80,8 +82,6 @@ func TestRemoveInstanceFile(t *testing.T) {
 		{name: "happy path file is removed", expectError: false, expectFileIsRemoved: true},
 		{name: "sad path file is not removed", expectError: true, expectFileIsRemoved: false},
 	}
-
-	const instanceFile = "instance_indicator.lock"
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
@@ -107,18 +107,18 @@ func TestRemoveInstanceFile(t *testing.T) {
 
 			// assert
 			if !test.expectError && err != nil {
-				t.Fatalf("unexpected error for testcase \"%s\"", test.name)
+				t.Fatalf(`unexpected error for testcase "%s"`, test.name)
 			}
 
 			if test.expectError && err == nil {
-				t.Fatalf("a error is expected for testcase \"%s\"", test.name)
+				t.Fatalf(`a error is expected for testcase "%s"`, test.name)
 			}
 
 			_, err = os.Stat(instanceFile)
 			fileExists := !errors.Is(err, os.ErrNotExist)
 
 			if test.expectFileIsRemoved && fileExists {
-				t.Fatalf("instance indicator file should be removed for testcase \"%s\"", test.name)
+				t.Fatalf(`instance indicator file should be removed for testcase "%s"`, test.name)
 			}
 		})
 	}
