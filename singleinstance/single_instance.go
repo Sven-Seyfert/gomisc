@@ -18,9 +18,9 @@ const instanceFile = "instance_indicator.lock"
 // error, the error will be returned.
 func CreateInstanceFile() error {
 	if existsInstanceFile() {
-		errMessage := fmt.Errorf("instance indicator file \"%s\" could not be created because it already exist", instanceFile) //nolint:goerr113,lll
+		message := `instance indicator file "%s" could not be created because it already exist`
 
-		return errMessage
+		return fmt.Errorf(message, instanceFile) //nolint:goerr113
 	}
 
 	file, err := os.Create(instanceFile)
