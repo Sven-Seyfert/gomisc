@@ -23,10 +23,10 @@ With **gomisc** which stands for "go miscellaneous", these miscellaneous golang 
 
 ## Features
 
-| Package        | Description                                                          | Package file(s)    | Usage example                                                                                                       |
-| ---            | ---                                                                  | ---                | ---                                                                                                                 |
-| crypt          | Encrypt and decrypt data (strings) by the usage of a secret and GCM. | crypt.go           | [examples/crypt/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/crypt/main.go)                   |
-| singleinstance | Ensures only a single instance of the program runs at the same time. | single_instance.go | [examples/singleinstance/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/singleinstance/main.go) |
+| Package        | Description                                                          | Package file(s)    | Usage example                                                                                                       | Tests available |
+| ---            | ---                                                                  | ---                | ---                                                                                                                 | ---             |
+| crypt          | Encrypt and decrypt data (strings) by the usage of a secret and GCM. | crypt.go           | [examples/crypt/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/crypt/main.go)                   | ✅               |
+| singleinstance | Ensures only a single instance of the program runs at the same time. | single_instance.go | [examples/singleinstance/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/singleinstance/main.go) | ✅               |
 
 More will follow soon.
 
@@ -43,7 +43,7 @@ To be defined.
 #### *Installation*
 
 Get **gomisc** by `go get -u github.com/sven-seyfert/gomisc` for the latest version<br />
-or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.8.0`.
+or for a specific tagged version (for example) by `go get github.com/sven-seyfert/gomisc@v0.9.0`.
 
 More will be defined soon.
 

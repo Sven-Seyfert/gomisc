@@ -11,6 +11,28 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.9.0] - 2023-08-30
+
+### Added
+
+- Test coverage report file.
+- Tests for package 'crypt'.
+
+### Changed
+
+- Error handling for package 'crypt'.
+- Extend tests for package 'singleinstance'.
+- Update test coverage file.
+
+### Documented
+
+- Update CHANGELOG.md and README.md file.
+
+### Refactored
+
+- Syntax adjustment of error message.
+- Use raw string (backtick) to avoid character escaping.
+
 ## [0.8.0] - 2023-08-29
 
 ### Added
@@ -111,7 +133,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/sven-seyfert/gomisc/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/sven-seyfert/gomisc/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/sven-seyfert/gomisc/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/sven-seyfert/gomisc/compare/v0.5.0...v0.6.0
