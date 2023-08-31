@@ -7,7 +7,7 @@
 
 [![license](https://img.shields.io/badge/license-MIT-indianred.svg?style=flat-square&logo=spdx&logoColor=white)](https://github.com/sven-seyfert/gomisc/blob/main/LICENSE)
 [![tag](https://img.shields.io/github/tag/sven-seyfert/gomisc.svg?color=slateblue&style=flat-square&logo=github)](https://github.com/sven-seyfert/gomisc/tags)
-[![go coverage](https://img.shields.io/badge/coverage-Ø_87%-seagreen.svg?style=flat-square&logo=go&logoColor=white)](https://raw.githack.com/sven-seyfert/gomisc/main/coverage/coverage.html)
+[![go coverage](https://img.shields.io/badge/coverage-Ø_87%25-seagreen.svg?style=flat-square&logo=go&logoColor=white)](https://raw.githack.com/sven-seyfert/gomisc/main/coverage/coverage.html)
 [![go reference](https://img.shields.io/badge/reference-gomisc-steelblue.svg?style=flat-square&logo=go&logoColor=white)](https://pkg.go.dev/github.com/sven-seyfert/gomisc)
 ![go.mod version)](https://img.shields.io/github/go-mod/go-version/sven-seyfert/gomisc?color=lightskyblue&label=go.mod&style=flat-square&logo=go&logoColor=white)
 [![last commit](https://img.shields.io/github/last-commit/sven-seyfert/gomisc.svg?color=darkgoldenrod&style=flat-square&logo=github)](https://github.com/sven-seyfert/gomisc/commits/master)
