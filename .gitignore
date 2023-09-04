@@ -19,6 +19,7 @@ go.work
 
 # Custom utils to maintain the repository/project
 Au3ChangelogUpdater.exe
+DetermineTestCoverageAverage.au3
 
 # Linter settings
 .golangci.yml
