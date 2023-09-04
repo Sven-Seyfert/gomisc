@@ -11,7 +11,7 @@
 [![go report](https://img.shields.io/badge/report-A+-green.svg?style=flat-square&logo=go&logoColor=white)](https://goreportcard.com/report/github.com/sven-seyfert/gomisc)
 [![go coverage](https://img.shields.io/badge/coverage-Ø_89%25-seagreen.svg?style=flat-square&logo=go&logoColor=white)](https://raw.githack.com/sven-seyfert/gomisc/main/coverage/coverage.html)
 ![go.mod version)](https://img.shields.io/github/go-mod/go-version/sven-seyfert/gomisc?color=lightskyblue&label=go.mod&style=flat-square&logo=go&logoColor=white)
-[![last commit](https://img.shields.io/github/last-commit/sven-seyfert/gomisc.svg?color=darkgoldenrod&style=flat-square&logo=github)](https://github.com/sven-seyfert/gomisc/commits/master)
+[![last commit](https://img.shields.io/github/last-commit/sven-seyfert/gomisc.svg?color=darkgoldenrod&style=flat-square&logo=github)](https://github.com/sven-seyfert/gomisc/commits/main)
 [![contributors](https://img.shields.io/github/contributors/sven-seyfert/gomisc.svg?color=darkolivegreen&style=flat-square&logo=github)](https://github.com/sven-seyfert/gomisc/graphs/contributors)
 
 [Description](#description) | [Features](#features) | [Documentation](#documentation) | [Getting started](#getting-started) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)
@@ -24,9 +24,14 @@ With **gomisc** which stands for "go miscellaneous", these miscellaneous golang 
 
 ## Features
 
-| Package        | Description                                                          | Package file(s)    | Usage example                                                                                                       | Tests | ![window](https://img.shields.io/badge/Win-gray?logo=windows) ![mac](https://img.shields.io/badge/Mac-gray?logo=apple) ![linux](https://img.shields.io/badge/Linux-gray?logo=linux&logoColor=white) ![independent](https://img.shields.io/badge/Platform_independent-gray?logo=hashnode&logoColor=white) |
+![independent](https://img.shields.io/badge/Platform_independent-gray?logo=hashnode&logoColor=white)
+![window](https://img.shields.io/badge/Win-gray?logo=windows)
+![mac](https://img.shields.io/badge/Mac-gray?logo=apple)
+![linux](https://img.shields.io/badge/Linux-gray?logo=linux&logoColor=white)
+
+| Package        | Description                                                          | Package file(s)    | Usage example                                                                                                       | Tests | Platform                                                                         |
 | ---            | ---                                                                  | ---                | ---                                                                                                                 | :---: | ---                                                                              |
-| clipboard      | Read or write text data to or from the clipboard.                    | clipboard.go       | [examples/clipboard/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/clipboard/main.go)           | ✔     | ![window](https://img.shields.io/badge/Win-gray?logo=windows)                    |
+| clipboard      | Read or write text data to or from the clipboard.                    | clipboard.go       | [examples/clipboard/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/clipboard/main.go)           | ✔     | ![window](https://img.shields.io/badge/-gray?logo=windows)                       |
 | crypt          | Encrypt and decrypt data (strings) by the usage of a secret and GCM. | crypt.go           | [examples/crypt/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/crypt/main.go)                   | ✔     | ![independent](https://img.shields.io/badge/-gray?logo=hashnode&logoColor=white) |
 | singleinstance | Ensures only a single instance of the program runs at the same time. | single_instance.go | [examples/singleinstance/main.go](https://github.com/sven-seyfert/gomisc/blob/main/examples/singleinstance/main.go) | ✔     | ![independent](https://img.shields.io/badge/-gray?logo=hashnode&logoColor=white) |
 
