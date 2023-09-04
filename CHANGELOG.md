@@ -11,6 +11,29 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.10.0] - 2023-09-04
+
+### Added
+
+- Package 'clipboard' and a usage example.
+- Tests for package 'clipboard'.
+
+### Changed
+
+- Extend .gitignore file.
+- Update coverage.html file.
+
+### Documented
+
+- Change badges in README.md file.
+- Fix incorrect display of 'go coverage' badge.
+- Update 'go coverage' badge url.
+- Update CHANGELOG.md and README.md file.
+
+### Refactored
+
+- Rename file cover.html to coverage.html.
+
 ## [0.9.0] - 2023-08-30
 
 ### Added
@@ -133,7 +156,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 - Adjust style of LICENSE.md file.
 - Add CHANGELOG.md file.
 
-[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/sven-seyfert/gomisc/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/sven-seyfert/gomisc/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/sven-seyfert/gomisc/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/sven-seyfert/gomisc/compare/v0.6.0...v0.7.0
