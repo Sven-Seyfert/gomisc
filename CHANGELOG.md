@@ -15,146 +15,147 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ### Added
 
-- Package 'clipboard' and a usage example.
-- Tests for package 'clipboard'.
+- Package 'clipboard' and a usage example. [91ae789](<repo-url>/91ae7899baed079e94b8aee21bc1f7369204299d)
+- Tests for package 'clipboard'. [d466782](<repo-url>/d466782fca04919877d1a341dcdfe7ae11eca52b)
 
 ### Changed
 
-- Extend .gitignore file.
-- Update coverage.html file.
+- Extend .gitignore file. [952b536](<repo-url>/952b5366ac7de5951ff4def5372cebc41e7ffac7)
+- Rename 'clipboard_window.go' to 'clipboard_windows.go'. [1efab72](<repo-url>/1efab726294532432194760fc3257750946b05b6)
+- Update coverage.html file. [425e0db](<repo-url>/425e0db94cc7f412d0667c84bdd2f3e2a13f1e90)
 
 ### Documented
 
-- Change badges in README.md file.
-- Fix incorrect display of 'go coverage' badge.
-- Update 'go coverage' badge url.
-- Update CHANGELOG.md and README.md file.
+- Change badges in README.md file. [f24d29a](<repo-url>/f24d29acac6216680f4f85c843bd947d8b20493b)
+- Fix incorrect display of 'go coverage' badge. [775e639](<repo-url>/775e639ff4c8ae88e0dc908df3543ad8aa9f5b74)
+- Update 'go coverage' badge url. [df1967b](<repo-url>/df1967be57c540190bc95982ff2eee12ea05dea3)
+- Update CHANGELOG.md and README.md file. [47a8112](<repo-url>/47a8112a24928f3731a520a4b11b1c9c79e1198a)
 
 ### Refactored
 
-- Rename file cover.html to coverage.html.
+- Rename file cover.html to coverage.html. [7b48299](<repo-url>/7b482992982199ed748b343ea7c96a2e35ecccb2)
 
 ## [0.9.0] - 2023-08-30
 
 ### Added
 
-- Test coverage report file.
-- Tests for package 'crypt'.
+- Test coverage report file. [dd857a7](<repo-url>/dd857a78f8293b178a00b0e461c4a38e528aadff)
+- Tests for package 'crypt'. [85f40b7](<repo-url>/85f40b7825e96072a198eb811d2290a561637f1f)
 
 ### Changed
 
-- Error handling for package 'crypt'.
-- Extend tests for package 'singleinstance'.
-- Update test coverage file.
+- Error handling for package 'crypt'. [1d2a4cb](<repo-url>/1d2a4cbd3c9d976558a8a5159e54683b3d9714bb)
+- Extend tests for package 'singleinstance'. [36b2737](<repo-url>/36b27377a7a9c9782c6cd78c4a850f9f1a0cd0d0)
+- Update test coverage file. [9add680](<repo-url>/9add6807985d1c2d4fac9fcb3a6671642f05aabf)
 
 ### Documented
 
-- Update CHANGELOG.md and README.md file.
+- Update CHANGELOG.md and README.md file. [7b786ea](<repo-url>/7b786ea8bf5cc33e5e1bb88880763dd64c89813b)
 
 ### Refactored
 
-- Syntax adjustment of error message.
-- Use raw string (backtick) to avoid character escaping.
+- Syntax adjustment of error message. [71dd730](<repo-url>/71dd730681f91d7a569c801acf917c5ed154e30d)
+- Use raw string (backtick) to avoid character escaping. [e556b6a](<repo-url>/e556b6a499a7a7c0bed0f11dd7f0c78a93eb26e1)
 
 ## [0.8.0] - 2023-08-29
 
 ### Added
 
-- Tests for package 'singleinstance'.
+- Tests for package 'singleinstance'. [f558d76](<repo-url>/f558d768a9612b3e81e21239beb16bc9a547ea84)
 
 ### Changed
 
-- Error handling for package 'singleinstance'.
+- Error handling for package 'singleinstance'. [41712cd](<repo-url>/41712cd8212b2dbdc963c997b788239fdcae48da)
 
 ### Documented
 
-- Update CHANGELOG.md and README.md file.
+- Update CHANGELOG.md and README.md file. [31ec7f2](<repo-url>/31ec7f2dfbc2fb4488ee9fefcd9f77906a68b087)
 
 ## [0.7.0] - 2023-08-25
 
 ### Changed
 
-- Add .golangci.yml to .gitignore (linter settings).
-- Apply linter suggestions.
+- Add .golangci.yml to .gitignore (linter settings). [0cb0150](<repo-url>/0cb015072a1468524f002b1e3bcdc7c13c80c701)
+- Apply linter suggestions. [b2d2550](<repo-url>/b2d2550ddb585eae6a3ef325574ba44d09adf0c9)
 
 ### Documented
 
-- Add package description for Godocs (pkg.go.dev).
-- Update CHANGELOG.md and README.md file.
+- Add package description for Godocs (pkg.go.dev). [3820f01](<repo-url>/3820f01e0454ecc5aefc88c5d32d0d84b810b68d)
+- Update CHANGELOG.md and README.md file. [b5c1943](<repo-url>/b5c194357e7ca3302db5b1300c27878aae80bd62)
 
 ## [0.6.0] - 2023-08-23
 
 ### Documented
 
-- Add missing description for package 'crypt'.
+- Add missing description for package 'crypt'. [1853785](<repo-url>/1853785a1a6cfc26cf47e40ae014bceced931f99)
 
 ## [0.5.0] - 2023-08-23
 
 ### Added
 
-- Package 'crypt' and a usage example.
+- Package 'crypt' and a usage example. [be48ee5](<repo-url>/be48ee5fbeee954ccd089632ea6a24be3d03170d)
 
 ### Changed
 
-- Extend example for 'singleinstance' package.
-- File structure of single_instance.go and documents functions by comments.
+- Extend example for 'singleinstance' package. [26316c2](<repo-url>/26316c23883817dea31931e6375588def20f6cef)
+- File structure of single_instance.go and documents functions by comments. [0f132eb](<repo-url>/0f132ebb20909d302f20a2c589c1d9b21e271a95)
 
 ### Documented
 
-- Update CHANGELOG.md and README.md file.
-- Update README.md file for introduced 'crypt' package.
+- Update CHANGELOG.md and README.md file. [46a5bb0](<repo-url>/46a5bb01b2b8d1a0836328fb60ce37850a664610)
+- Update README.md file for introduced 'crypt' package. [ce31a23](<repo-url>/ce31a2309c53ab387320a49e7283a2df583191b8)
 
 ## [0.4.0] - 2023-08-21
 
 ### Changed
 
-- Extract error handling to separate function.
+- Extract error handling to separate function. [c4546bd](<repo-url>/c4546bd19e7e3d377c53bf60c72be41a16bd0e83)
 
 ### Documented
 
-- Update README.md by hint about purpose project.
+- Update README.md by hint about purpose project. [906eaa4](<repo-url>/906eaa4e135160f2fea3a449b4811215ae268611)
 
 ## [0.3.0] - 2023-08-20
 
 ### Changed
 
-- My repository name from capital case to lower case.
+- My repository name from capital case to lower case. [59b4885](<repo-url>/59b4885a3ea4a103ada07b0148cc3fbfb00b6f82)
 
 ### Documented
 
-- Bring the original LICENSE file back.
-- Update CHANGELOG.md and README.md file.
+- Bring the original LICENSE file back. [b7eacff](<repo-url>/b7eacffa56fac966eaf7a82baad25893105653f3)
+- Update CHANGELOG.md and README.md file. [ba858d3](<repo-url>/ba858d35f6ea20678d82592899175515da66a1ae)
 
 ## [0.2.0] - 2023-08-19
 
 ### Added
 
-- Initialize go by go.mod file.
-- Package 'singleinstance' and a usage example.
+- Initialize go by go.mod file. [910ad1b](<repo-url>/910ad1b3e3497eb293e91b54b34192cd800b20cd)
+- Package 'singleinstance' and a usage example. [da79261](<repo-url>/da792618f82908020a291555f17f9c56f5a1aa5f)
 
 ### Changed
 
-- Extend .gitignore file.
+- Extend .gitignore file. [efba4b4](<repo-url>/efba4b41299360a67a58dc4dfe2c3c1783dc8051)
 
 ### Documented
 
-- README.md structure change (first draft).
-- Trivial upper case change in CHANGELOG.md for proper github username.
+- README.md structure change (first draft). [1b67221](<repo-url>/1b67221e7d460ae6a9e434882011b4a6933ad2a9)
+- Trivial upper case change in CHANGELOG.md for proper github username. [3d06708](<repo-url>/3d0670837422b238a2a4aeb55fd088b8705d0425)
 
 ## [0.1.0] - 2023-08-19
 
 ### Added
 
-- Initial commit
+- Initial commit [c151c43](<repo-url>/c151c4395192ad655cef7355974abafb44f6ed33)
 
 ### Changed
 
-- Delete unnecessary text in .gitignore file.
+- Delete unnecessary text in .gitignore file. [077b1e5](<repo-url>/077b1e5e72eadc8a7c33f22450ade6b0f5bf74ed)
 
 ### Documented
 
-- Adjust style of LICENSE.md file.
-- Add CHANGELOG.md file.
+- Add CHANGELOG.md file. [43a0db6](<repo-url>/43a0db6463a0457cc45520d70dbbe9232aa2d622)
+- Adjust style of LICENSE.md file. [bc6adc1](<repo-url>/bc6adc1a8e8c52ad696c13c2c2b5167c2634d1a2)
 
 [Unreleased]: https://github.com/sven-seyfert/gomisc/compare/v0.10.0...HEAD
 [0.10.0]: https://github.com/sven-seyfert/gomisc/compare/v0.9.0...v0.10.0
